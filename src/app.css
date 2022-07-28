@@ -31,18 +31,16 @@ body {
   min-height: 100vh;
 }
 button {
-  border-radius: 8px;
   border: 1px solid transparent;
   padding: 1em 1.2em;
   font-size: 1em;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #101010;
+  margin: 5px 0;
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: -webkit-focus-ring-color auto 4px;
@@ -56,13 +54,60 @@ button:focus-visible {
   padding: 10px;
 }
 .calculator input {
-  width: auto;
+  width: 100%;
   font-size: 20px;
   line-height: 27px;
   text-align: right;
+  background-color: #fff;
   padding: 20px;
+  border: none;
   outline: none;
+  box-sizing: border-box;
 }
+
+.calculator .buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calculator .buttons .operations {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.calculator .buttons .operations button {
+  width: 24%;
+  background-color: #ff0000;
+}
+
+.calculator .buttons .numbers {
+  width: 75%;
+}
+
+.calculator .buttons .numbers > .section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator .buttons .numbers > .section button {
+  width: 32%;
+}
+
+.calculator .buttons .numbers button:hover {
+  background-color: #050c89;
+}
+
+.calculator .buttons .equal {
+  flex: 1;
+}
+
+.calculator .buttons .equal button {
+  width: 95%;
+  height: 95%;
+  background-color: #3e6507;
+  margin-left: 5%;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
