@@ -4,16 +4,53 @@
   let console = '';
 
   function resolveState(){
+    switch(state){
+      case "add":
+        total += parseFloat(console);
+        console="0";
+        break;
+      case "substract":
+        total -= parseFloat(console);
+        console="0";
+        break;
+      case "multiply":
+        total *= parseFloat(console);
+        console="0";
+        break;
+      case "divide":
+        total += parseFloat(console);
+        console="0";
+        break;
+      default:
+      total = parseFloat(console);
+        console="0";
+        break;
+    }
 
   }
   function setOperation(operation){
-
+    resolveState();
+    state = operation;
   }
   function setValues(value){
-
+      if(console.toString() == '' || state == 'equal') {
+          console = '';
+      }
+      if(state == 'equal'){
+        state = null;
+      }
+      if(value == 'C'){
+        total = 0;
+        state = null;
+        console = '';
+        return;
+      }
+      console = console + value;
   }
   function equal(){
-
+    resolveState();
+    console = total;
+    state = "equal"
   }
 </script>
 

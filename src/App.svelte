@@ -6,6 +6,3 @@
     <Calculation />
 </main>
 
-<style>
-
-</style>
