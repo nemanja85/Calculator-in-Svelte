@@ -12,6 +12,10 @@ cd calculator-svelte
 ```
 
 ```sh
+npm install
+```
+
+```sh
 npm run dev
 ```
 
